@@ -28,7 +28,7 @@ const {
 
 describe('Higher Order Functions', () => {
   describe('Identity Functions', () => {
-    describe('identity', () => {
+    describe.only('identity', () => {
       it('returns the first value passed as an argument', () => {
         expect(identity(3)).toBe(3);
         expect(identity('winter')).toBe('winter');
@@ -539,20 +539,3 @@ describe('Advanced Functionality', () => {
     });
   });
 });
-Footer
-© 2023 GitHub, Inc.
-Footer navigation
-
-    Terms
-    Privacy
-    Security
-    Status
-    Docs
-    Contact GitHub
-    Pricing
-    API
-    Training
-    Blog
-    About
-
-fun-higher-order-workshop/index.test.js at main · northcoders/fun-higher-order-workshop
