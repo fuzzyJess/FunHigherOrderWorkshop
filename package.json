@@ -1,0 +1,22 @@
+{
+  "name": "funhigherorderworkshop",
+  "version": "1.0.0",
+  "description": "## Goals",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fuzzyJess/FunHigherOrderWorkshop.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fuzzyJess/FunHigherOrderWorkshop/issues"
+  },
+  "homepage": "https://github.com/fuzzyJess/FunHigherOrderWorkshop#readme",
+  "devDependencies": {
+    "jest": "^29.5.0"
+  }
+}
