@@ -4,9 +4,10 @@ function identity(arg) {
 
 function identityF(arg) {
    function returnFunction() {
-    return identityF(arg);
+    return identity(arg);
    }
     return returnFunction;
 }
+
 
 module.exports = { identity, identityF };
