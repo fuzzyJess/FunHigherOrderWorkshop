@@ -22,4 +22,10 @@ function multiply (num1, num2) {
     return num1 * num2;
 }
 
-module.exports = { identity, identityF, add, subtract, multiply };
+function increment(num) {
+    return add(num, 1) ;
+
+}
+
+module.exports = { identity, identityF, add, subtract, multiply, 
+                   increment };

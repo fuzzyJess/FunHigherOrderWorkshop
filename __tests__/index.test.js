@@ -57,7 +57,7 @@ describe('Higher Order Functions', () => {
     });
   });
 
-  describe.only('Binary Operations', () => {
+  describe('Binary Operations', () => {
     describe('add', () => {
       it('returns total of the two arguments', () => {
         expect(add(56, 5)).toBe(56 + 5);
@@ -76,7 +76,7 @@ describe('Higher Order Functions', () => {
     });
   });
 
-  describe('Functions with multiple invocations', () => {
+  describe.only('Functions with multiple invocations', () => {
     describe('increment', () => {
       it('increments the passed argument by 1', () => {
         expect(increment(0)).toBe(1);
