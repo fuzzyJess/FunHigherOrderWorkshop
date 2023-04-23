@@ -41,7 +41,7 @@ describe('Higher Order Functions', () => {
         expect(identity(arr)).toBe(arr);
       });
     });
-    describe.only('identityF', () => {
+    describe('identityF', () => {
       it('returns a function', () => {
         expect(typeof identityF()).toBe('function');
       });
@@ -57,7 +57,7 @@ describe('Higher Order Functions', () => {
     });
   });
 
-  describe('Binary Operations', () => {
+  describe.only('Binary Operations', () => {
     describe('add', () => {
       it('returns total of the two arguments', () => {
         expect(add(56, 5)).toBe(56 + 5);
