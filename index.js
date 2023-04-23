@@ -2,4 +2,11 @@ function identity(arg) {
     return arg
 };
 
-module.exports = { identity };
+function identityF(arg) {
+   function returnFunction() {
+    return identityF(arg);
+   }
+    return returnFunction;
+}
+
+module.exports = { identity, identityF };

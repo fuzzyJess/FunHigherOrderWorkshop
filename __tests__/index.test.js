@@ -28,7 +28,7 @@ const {
 
 describe('Higher Order Functions', () => {
   describe('Identity Functions', () => {
-    describe.only('identity', () => {
+    describe('identity', () => {
       it('returns the first value passed as an argument', () => {
         expect(identity(3)).toBe(3);
         expect(identity('winter')).toBe('winter');
@@ -41,7 +41,7 @@ describe('Higher Order Functions', () => {
         expect(identity(arr)).toBe(arr);
       });
     });
-    describe('identityF', () => {
+    describe.only('identityF', () => {
       it('returns a function', () => {
         expect(typeof identityF()).toBe('function');
       });
