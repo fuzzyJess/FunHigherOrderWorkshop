@@ -34,10 +34,8 @@ function addF(num) {
     }
 }
 
-function curry(binaryFunc, value) {
-    let firstValue = value;
-    return (value2) => {
-        let secondValue = value2;
+function curry(binaryFunc, firstValue) {
+    return (secondValue) => {
         return binaryFunc(firstValue, secondValue);
     }
 }
