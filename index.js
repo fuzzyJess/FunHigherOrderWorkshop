@@ -32,7 +32,6 @@ function addF(num) {
         let secondNum = num
         return add(firstNum, secondNum);
     }
-   
 }
 
 function curry(binaryFunc, value) {
@@ -45,7 +44,9 @@ function curry(binaryFunc, value) {
 
 function liftF() {
     return () => {
-        
+        return () => {
+            
+        }
     }
 }
 
