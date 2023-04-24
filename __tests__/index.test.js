@@ -125,8 +125,14 @@ describe('Higher Order Functions', () => {
   });
 
    describe.only('once', () => {
-     it('returns a function on first invocation', () => {
-      expect(typeof once(add)).toBe('function');
+    it('returns a function on first invocation', () => {
+    expect(typeof once(add)).toBe('function');
+    });
+    it('first invocation will return the result', () => {
+      const timesByThirty = once(multiply);
+      expect(timesByThirty(30, 6)).toBe(multiply(30, 6));
+      const addSeven = once(add);
+      expect(addSeven(7, 11)).toBe(add(7, 11));
     })
    })
 
