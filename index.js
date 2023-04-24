@@ -46,5 +46,9 @@ function liftF(binaryFunc) {
     }
 }
 
+function once(binaryFunc) {
+    return binaryFunc;
+}
+
 module.exports = { identity, identityF, add, subtract, multiply, 
-                   increment, addF, curry,  liftF };
+                   increment, addF, curry, liftF, once };
