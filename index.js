@@ -35,5 +35,9 @@ function addF(num) {
    
 }
 
+function curry(binaryFunc, value) {
+    return () => {}
+}
+
 module.exports = { identity, identityF, add, subtract, multiply, 
-                   increment, addF };
+                   increment, addF, curry };
