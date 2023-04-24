@@ -76,14 +76,14 @@ describe('Higher Order Functions', () => {
     });
   });
 
-  describe.only('Functions with multiple invocations', () => {
+  describe('Functions with multiple invocations', () => {
     describe('increment', () => {
       it('increments the passed argument by 1', () => {
         expect(increment(0)).toBe(1);
         expect(increment(-3)).toBe(-2);
       });
     });
-    describe('addF', () => {
+    describe.only('addF', () => {
       it('returns a function on first invocation', () => {
         expect(typeof addF(3)).toBe('function');
       });
