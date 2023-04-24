@@ -36,7 +36,11 @@ function addF(num) {
 }
 
 function curry(binaryFunc, value) {
-    return () => {}
+    let firstValue = value;
+    return (value2) => {
+        let secondValue = value2;
+        return binaryFunc(firstValue, secondValue);
+    }
 }
 
 module.exports = { identity, identityF, add, subtract, multiply, 
