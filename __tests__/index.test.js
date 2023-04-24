@@ -83,7 +83,7 @@ describe('Higher Order Functions', () => {
         expect(increment(-3)).toBe(-2);
       });
     });
-    describe('addF', () => {
+    describe.only('addF', () => {
       it('returns a function on first invocation', () => {
         expect(typeof addF(3)).toBe('function');
       });
@@ -97,7 +97,7 @@ describe('Higher Order Functions', () => {
         expect(add100(-100)).toBe(0);
       });
     });
-    describe.only('curry', () => {
+    describe('curry', () => {
       it('will take a binary function and a single value as arguments and return a function', () => {
         expect(typeof curry(add, 5)).toBe('function');
       });

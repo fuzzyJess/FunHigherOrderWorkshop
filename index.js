@@ -26,10 +26,8 @@ function increment(num) {
     return add(num, 1) ;
 }
 
-function addF(num) {
-    let firstNum = num;
-    return (num) => {
-        let secondNum = num
+function addF(firstNum) {
+    return (secondNum) => {
         return add(firstNum, secondNum);
     }
 }
