@@ -42,10 +42,10 @@ function curry(binaryFunc, value) {
     }
 }
 
-function liftF() {
-    return () => {
-        return () => {
-            
+function liftF(binaryFunc) {
+    return (value1) => {
+        return (value2) => {
+            return binaryFunc(value1, value2);
         }
     }
 }
