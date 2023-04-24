@@ -133,6 +133,11 @@ describe('Higher Order Functions', () => {
       expect(timesByThirty(30, 6)).toBe(multiply(30, 6));
       const addSeven = once(add);
       expect(addSeven(7, 11)).toBe(add(7, 11));
+    });
+    it('second invocation will not return a result', () => {
+      const timesByThirty = once(multiply);
+      timesByThirty(30, 6);
+      expect(timesByThirty(30, 6)).toBe(undefined);
     })
    })
 

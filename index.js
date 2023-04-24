@@ -46,9 +46,17 @@ function liftF(binaryFunc) {
     }
 }
 
-function once(binaryFunc) {
-    return binaryFunc;
+function once(binaryFunc, count = 0) {
+    return (num1, num2) => {
+        count++;
+        if (count === 1) {
+            return binaryFunc(num1, num2)
+        }
+    }
 }
+    
+    
+
 
 module.exports = { identity, identityF, add, subtract, multiply, 
                    increment, addF, curry, liftF, once };
