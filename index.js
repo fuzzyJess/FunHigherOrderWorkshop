@@ -74,9 +74,9 @@ function composeB(func1, func2) {
     };
 }
 
-function limit() {
-    return () => {
-
+function limit(func) {
+    return (num1, num2) => {
+        return func(num1, num2);
     };
 }
     
