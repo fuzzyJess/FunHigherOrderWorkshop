@@ -91,8 +91,11 @@ function from(num) {
     }
 }    
 
-function to() {
-    return () => {}
+function to(generator, endValue) {
+    let count = generator();
+    return () => {
+        return count ++;
+    }
 }
 
 module.exports = { identity, identityF, add, subtract, multiply, 
