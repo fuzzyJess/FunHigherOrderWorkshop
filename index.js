@@ -59,9 +59,14 @@ function twice(func) {
         return func(num, num);
     }
 }
+
+function composeU(func) {
+return func
+}
     
     
 
 
 module.exports = { identity, identityF, add, subtract, multiply, 
-                   increment, addF, curry, liftF, once, twice };
+                   increment, addF, curry, liftF, once, twice,
+                   composeU };
