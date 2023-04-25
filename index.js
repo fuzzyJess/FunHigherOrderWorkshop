@@ -74,10 +74,14 @@ function composeB(func1, func2) {
     };
 }
 
-function limit(func) {
+function limit(func, limit) {
+    let count = limit;
     return (num1, num2) => {
-        return func(num1, num2);
-    };
+        if (count > 0) {
+            count -= 1;
+            return func(num1, num2);
+        };
+    }
 }
     
     
