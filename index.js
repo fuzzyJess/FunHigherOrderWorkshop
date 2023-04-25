@@ -85,8 +85,9 @@ function limit(func, limit) {
 }
     
 function from(num) {
+    let count = num;
     return () => {
-        
+        return count ++;
     }
 }    
 
