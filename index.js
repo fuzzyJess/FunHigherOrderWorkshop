@@ -68,7 +68,10 @@ function composeU(func1, func2) {
 }
 
 function composeB(func1, func2) {
-    return () => {};
+    return (num1, num2, num3) => {
+        firstResult = func1(num1, num2);
+        return func2(firstResult, num3);
+    };
 }
     
     
