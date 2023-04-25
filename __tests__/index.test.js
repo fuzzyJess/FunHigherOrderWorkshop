@@ -124,7 +124,7 @@ describe('Higher Order Functions', () => {
     });
   });
 
-   describe.only('once', () => {
+   describe('once', () => {
     it('returns a function on first invocation', () => {
     expect(typeof once(add)).toBe('function');
     });
@@ -142,7 +142,7 @@ describe('Higher Order Functions', () => {
    })
 
   describe('Unary Functions', () => {
-    describe('twice', () => {
+    describe.only('twice', () => {
       it('returns a function on first invocation', () => {
         const double = twice(add);
         expect(typeof double).toBe('function');

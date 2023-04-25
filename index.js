@@ -9,7 +9,6 @@ function identityF(arg) {
     return returnFunction;
 }
 
-
 function add(num1, num2) {
     return num1 + num2;
 }
@@ -54,9 +53,13 @@ function once(binaryFunc, count = 0) {
         }
     }
 }
+
+function twice(binaryFunc) {
+return binaryFunc;
+}
     
     
 
 
 module.exports = { identity, identityF, add, subtract, multiply, 
-                   increment, addF, curry, liftF, once };
+                   increment, addF, curry, liftF, once, twice };
