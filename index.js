@@ -84,9 +84,13 @@ function limit(func, limit) {
     }
 }
     
-    
+function from(num) {
+    return () => {
+        
+    }
+}    
 
 
 module.exports = { identity, identityF, add, subtract, multiply, 
                    increment, addF, curry, liftF, once, twice,
-                   composeU, composeB, limit };
+                   composeU, composeB, limit, from };
