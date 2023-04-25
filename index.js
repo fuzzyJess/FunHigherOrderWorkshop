@@ -60,8 +60,11 @@ function twice(func) {
     }
 }
 
-function composeU(func) {
-return func
+function composeU(func1, func2) {
+    return (num) => {
+        firstResult = func1(num);
+        return func2(firstResult);
+    }
 }
     
     
