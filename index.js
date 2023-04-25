@@ -94,7 +94,9 @@ function from(num) {
 function to(generator, endValue) {
     let count = generator();
     return () => {
-        return count ++;
+        if (count < endValue) {
+            return count ++;
+        }
     }
 }
 
