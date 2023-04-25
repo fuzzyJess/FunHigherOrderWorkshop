@@ -54,8 +54,10 @@ function once(binaryFunc, count = 0) {
     }
 }
 
-function twice(binaryFunc) {
-return binaryFunc;
+function twice(func) {
+    return (num) => {
+        return func(num, num);
+    }
 }
     
     
