@@ -66,10 +66,14 @@ function composeU(func1, func2) {
         return func2(firstResult);
     }
 }
+
+function composeB(func1, func2) {
+    return () => {};
+}
     
     
 
 
 module.exports = { identity, identityF, add, subtract, multiply, 
                    increment, addF, curry, liftF, once, twice,
-                   composeU };
+                   composeU, composeB };
