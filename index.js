@@ -91,7 +91,10 @@ function from(num) {
     }
 }    
 
+function to() {
+    return () => {}
+}
 
 module.exports = { identity, identityF, add, subtract, multiply, 
                    increment, addF, curry, liftF, once, twice,
-                   composeU, composeB, limit, from };
+                   composeU, composeB, limit, from, to };
