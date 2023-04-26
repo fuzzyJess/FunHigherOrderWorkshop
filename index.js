@@ -100,6 +100,10 @@ function to(generator, endValue) {
     }
 }
 
+function fromTo() {
+    return () => {};
+}
+
 module.exports = { identity, identityF, add, subtract, multiply, 
                    increment, addF, curry, liftF, once, twice,
-                   composeU, composeB, limit, from, to };
+                   composeU, composeB, limit, from, to, fromTo };
