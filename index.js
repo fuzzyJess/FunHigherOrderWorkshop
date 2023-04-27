@@ -104,7 +104,9 @@ function fromTo(start, end) {
     let count = 0;
     return () => {
         if (count < end) {
-            return count + start;
+            let currentValue = count + start;
+            count++;
+            return currentValue;
         }
     };
 }
