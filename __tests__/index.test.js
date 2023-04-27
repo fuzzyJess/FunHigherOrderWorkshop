@@ -277,7 +277,7 @@ describe('Higher Order Functions', () => {
         expect(index()).toBe(undefined);
       });
     });
-    describe.only('element', () => {
+    describe('element', () => {
       it('on first invocation will return a function', () => {
         const ele = element([], fromTo(0, 1));
         expect(typeof ele).toBe('function');
@@ -296,7 +296,7 @@ describe('Higher Order Functions', () => {
         expect(ele()).toBe('The Giant');
       });
     });
-    describe('collect', () => {
+    describe.only('collect', () => {
       it('returns a function', () => {
         expect(typeof collect()).toBe('function');
       });

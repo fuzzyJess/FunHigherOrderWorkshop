@@ -117,10 +117,14 @@ function element(arr, generator = fromTo(0, arr.length -1)) {
         let returnValue = arr[currentIndex];
         currentIndex++;
         return returnValue;
-    }
+    };
+}
+
+function collect() {
+    return () => {};
 }
 
 module.exports = { identity, identityF, add, subtract, multiply, 
                    increment, addF, curry, liftF, once, twice,
                    composeU, composeB, limit, from, to, fromTo,
-                   element };
+                   element, collect };
