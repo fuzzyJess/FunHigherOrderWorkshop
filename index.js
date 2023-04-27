@@ -111,7 +111,7 @@ function fromTo(start, end) {
     };
 }
 
-function element(arr, generator) {
+function element(arr, generator = fromTo(0, arr.length -1)) {
     let currentIndex = generator();
     return () => {
         let returnValue = arr[currentIndex];
