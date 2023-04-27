@@ -111,8 +111,13 @@ function fromTo(start, end) {
     };
 }
 
-function element() {
-    return () => {}
+function element(arr, generator) {
+    let currentIndex = generator();
+    return () => {
+        let returnValue = arr[currentIndex];
+        currentIndex++;
+        return returnValue;
+    }
 }
 
 module.exports = { identity, identityF, add, subtract, multiply, 
