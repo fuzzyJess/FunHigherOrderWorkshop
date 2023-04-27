@@ -107,10 +107,15 @@ function fromTo(start, end) {
             let currentValue = count + start;
             count++;
             return currentValue;
-        }
+        };
     };
+}
+
+function element() {
+    return () => {}
 }
 
 module.exports = { identity, identityF, add, subtract, multiply, 
                    increment, addF, curry, liftF, once, twice,
-                   composeU, composeB, limit, from, to, fromTo };
+                   composeU, composeB, limit, from, to, fromTo,
+                   element };

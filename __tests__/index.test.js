@@ -255,7 +255,7 @@ describe('Higher Order Functions', () => {
         expect(index()).toBe(undefined);
       });
     });
-    describe.only('fromTo', () => {
+    describe('fromTo', () => {
       it('returns a function on first invocation', () => {
         const index = fromTo(0, 5);
         expect(typeof index).toBe('function');
@@ -277,7 +277,7 @@ describe('Higher Order Functions', () => {
         expect(index()).toBe(undefined);
       });
     });
-    describe('element', () => {
+    describe.only('element', () => {
       it('on first invocation will return a function', () => {
         const ele = element([], fromTo(0, 1));
         expect(typeof ele).toBe('function');
