@@ -100,8 +100,13 @@ function to(generator, endValue) {
     }
 }
 
-function fromTo() {
-    return () => {};
+function fromTo(start, end) {
+    let count = 0;
+    return () => {
+        if (count < end) {
+            return count + start;
+        }
+    };
 }
 
 module.exports = { identity, identityF, add, subtract, multiply, 
