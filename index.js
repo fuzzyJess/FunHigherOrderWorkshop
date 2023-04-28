@@ -145,11 +145,13 @@ function concat(gen1, gen2 = fromTo()) {
         } 
         return gen2();
     }
-    
-    
+}
+
+function fibonacciF() {
+    return () => {};
 }
 
 module.exports = { identity, identityF, add, subtract, multiply, 
                    increment, addF, curry, liftF, once, twice,
                    composeU, composeB, limit, from, to, fromTo,
-                   element, collect, filter, concat };
+                   element, collect, filter, concat, fibonacciF };
