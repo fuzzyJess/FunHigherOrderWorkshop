@@ -147,8 +147,10 @@ function concat(gen1, gen2 = fromTo()) {
     }
 }
 
-function fibonacciF() {
-    return () => {};
+function fibonacciF(num1 = 0, num2 = 1) {
+    return () => {
+        return num1;
+    };
 }
 
 module.exports = { identity, identityF, add, subtract, multiply, 
