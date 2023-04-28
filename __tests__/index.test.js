@@ -321,7 +321,7 @@ describe('Higher Order Functions', () => {
         expect(list).toEqual([0, 1, 2]);
       });
     });
-    describe.only('filter', () => {
+    describe('filter', () => {
       it('returns a function', () => {
         expect(typeof filter()).toBe('function');
       });
@@ -353,7 +353,7 @@ describe('Higher Order Functions', () => {
         expect(fil()).toBe(undefined);
       });
     });
-    describe('concat', () => {
+    describe.only('concat', () => {
       it('returns a function', () => {
         const con = concat(fromTo(0, 3), fromTo(0, 2));
         expect(typeof con).toBe('function');
