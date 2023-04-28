@@ -147,9 +147,11 @@ function concat(gen1, gen2 = fromTo()) {
     }
 }
 
-function fibonacciF(num1 = 0, num2 = 1) {
+function fibonacciF(num1, num2){
+    const numbers = [num1, num2];
     return () => {
-        return num1;
+        numbers.push(numbers[numbers.length - 2] + numbers[numbers.length - 1]);
+        return numbers[numbers.length - 3];
     };
 }
 
