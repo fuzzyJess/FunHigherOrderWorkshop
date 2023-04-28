@@ -155,8 +155,13 @@ function fibonacciF(num1, num2){
     };
 }
 
-function genSymF() {
-    return () => {};
+function genSymF(symbol) {
+        let count = 0;
+    return () => {
+        let returnSymbol = symbol + count;
+        count ++;
+        return returnSymbol;
+    };
 }
 
 module.exports = { identity, identityF, add, subtract, multiply, 
