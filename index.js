@@ -137,8 +137,16 @@ function filter(func, predicate) {
     };
 }
 
-function concat() {
-    return () => {};
+function concat(gen1, gen2 = fromTo()) {
+    return () => {
+        let value = gen1();
+        while (value != undefined) {
+            return value
+        } 
+        return gen2();
+    }
+    
+    
 }
 
 module.exports = { identity, identityF, add, subtract, multiply, 

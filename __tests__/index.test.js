@@ -362,7 +362,7 @@ describe('Higher Order Functions', () => {
         const ducks = [
           'Scrooge McDuck',
           'The Ugly Duckling',
-          'The Howard the Duck',
+          'The Emily Duck',
         ];
         const ele = element(ducks);
         const con = concat(fromTo(0, 2), ele);
@@ -370,7 +370,7 @@ describe('Higher Order Functions', () => {
         expect(con()).toBe(1);
         expect(con()).toBe('Scrooge McDuck');
         expect(con()).toBe('The Ugly Duckling');
-        expect(con()).toBe('The Howard the Duck');
+        expect(con()).toBe('The Emily Duck');
         expect(con()).toBe(undefined);
       });
       it('emits all the values from the passed generator if only one is passed', () => {
