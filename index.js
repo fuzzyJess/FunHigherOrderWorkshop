@@ -122,8 +122,9 @@ function element(arr, generator = fromTo(0, arr.length -1)) {
 
 function collect(generator = fromTo(), arr) {
     return () => {
-        
-        return generator();
+        let currentNumber = generator();
+        arr.push(currentNumber);
+        return currentNumber;
     };
 }
 
