@@ -128,8 +128,12 @@ function collect(generator = fromTo(), arr) {
     };
 }
 
-function filter() {
-    return () => {};
+function filter(func, predicate) {
+    return () => {
+        if (predicate) {
+            return func();
+        }
+    };
 }
 
 module.exports = { identity, identityF, add, subtract, multiply, 
