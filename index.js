@@ -130,9 +130,10 @@ function collect(generator = fromTo(), arr) {
 
 function filter(func, predicate) {
     return () => {
-        if (predicate()) {
-            return func();
-        }
+        let result = func();
+        if (predicate(result)) {
+            return result;
+        };
     };
 }
 
