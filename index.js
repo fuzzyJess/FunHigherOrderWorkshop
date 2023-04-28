@@ -120,8 +120,11 @@ function element(arr, generator = fromTo(0, arr.length -1)) {
     };
 }
 
-function collect() {
-    return () => {};
+function collect(generator = fromTo(), arr) {
+    return () => {
+        
+        return generator();
+    };
 }
 
 module.exports = { identity, identityF, add, subtract, multiply, 
