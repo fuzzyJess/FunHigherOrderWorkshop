@@ -159,13 +159,22 @@ function genSymF(symbol) {
         let count = 0;
     return () => {
         let returnSymbol = symbol + count;
-        count ++;
+        count++;
         return returnSymbol;
     };
 }
 
-function genSymFF() {
-    return () => {};
+function genSymFF(func, start) {
+    
+    return (symbol) => {
+        let count = 0;
+        count = func(start);
+        let returnSymbol = symbol + count
+        return () => {
+        start ++;
+            return returnSymbol;
+        }
+    };
 }
 
 module.exports = { identity, identityF, add, subtract, multiply, 
