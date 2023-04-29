@@ -165,13 +165,11 @@ function genSymF(symbol) {
 }
 
 function genSymFF(func, start) {
-    
+    let count = 0;
     return (symbol) => {
-        let count = 0;
+        let returnSymbol = symbol + count;
         count = func(start);
-        let returnSymbol = symbol + count
         return () => {
-        start ++;
             return returnSymbol;
         }
     };

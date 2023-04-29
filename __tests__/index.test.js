@@ -439,7 +439,7 @@ describe('Higher Order Functions', () => {
         expect(typeof genSymF).toBe('function');
       });
       it('giving increment() and a seed will mimic gensymf behaviours ', () => {
-        const genSymF = genSymFF(increment, -1);
+        const genSymF = genSymFF(increment, 1);
         const genA = genSymF('A');
         const genB = genSymF('B');
         expect(genA()).toBe('A0');
