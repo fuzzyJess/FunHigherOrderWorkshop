@@ -183,7 +183,7 @@ function counter(num) {
             return num + 1;
         }, down: 
         () => {
-            
+            return num - 1;
         }};
 }
 
