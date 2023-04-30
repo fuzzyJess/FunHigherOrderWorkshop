@@ -178,7 +178,7 @@ function genSymFF(func, inputNum) {
 }
 
 function counter() {
-    return {};
+    return {up: () => {}};
 }
 
 module.exports = { identity, identityF, add, subtract, multiply, 
