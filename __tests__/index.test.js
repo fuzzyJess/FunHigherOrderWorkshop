@@ -454,7 +454,7 @@ describe('Higher Order Functions', () => {
   });
 
   describe('Object Methods', () => {
-    describe.only('counter', () => {
+    describe('counter', () => {
       it('returns an object', () => {
         const obj = counter(10);
         expect(typeof obj).toBe('object');
@@ -487,7 +487,7 @@ describe('Higher Order Functions', () => {
         expect(Object.keys(counter(20))).toEqual(['up', 'down']);
       });
     });
-    describe('revoke', () => {
+    describe.only('revoke', () => {
       it('returns an object', () => {
         const obj = revokable(add);
         expect(typeof obj).toBe('object');

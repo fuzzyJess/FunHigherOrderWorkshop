@@ -164,6 +164,8 @@ function genSymF(symbol) {
     };
 }
 
+// need to come back to genSymFF... not yet working...
+
 function genSymFF(func, inputNum) {
     inputNum = func(inputNum);
     return (inputLetter) => {
@@ -188,6 +190,10 @@ function counter(num) {
             counter--;
             return counter;
         }};
+}
+
+function revoke() {
+    return {};
 }
 
 module.exports = { identity, identityF, add, subtract, multiply, 
