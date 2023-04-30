@@ -433,13 +433,13 @@ describe('Higher Order Functions', () => {
         expect(genA()).toBe('A2');
       });
     });
-    describe.only('genSymFF', () => {
+    describe('genSymFF', () => {
       it('returns a function', () => {
         const genSymF = genSymFF(increment, 0);
         expect(typeof genSymF).toBe('function');
       });
       it('giving increment() and a seed will mimic gensymf behaviours ', () => {
-        const genSymF = genSymFF(increment, 1);
+        const genSymF = genSymFF(increment, -1);
         const genA = genSymF('A');
         const genB = genSymF('B');
         expect(genA()).toBe('A0');
@@ -454,7 +454,7 @@ describe('Higher Order Functions', () => {
   });
 
   describe('Object Methods', () => {
-    describe('counter', () => {
+    describe.only('counter', () => {
       it('returns an object', () => {
         const obj = counter(10);
         expect(typeof obj).toBe('object');

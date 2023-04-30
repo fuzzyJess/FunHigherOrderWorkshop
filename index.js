@@ -164,19 +164,25 @@ function genSymF(symbol) {
     };
 }
 
-function genSymFF(func, start) {
-    let count = 0;
-    return (symbol) => {
-        let returnSymbol = symbol + count;
-        count = func(start);
+function genSymFF(func, inputNum) {
+    inputNum = func(inputNum);
+    return (inputLetter) => {
+        let returnNum = inputNum
         return () => {
-            return returnSymbol;
+            console.log(inputLetter + returnNum)
+            return inputLetter + returnNum;
+  
         }
+        
     };
+}
+
+function counter() {
+    return {};
 }
 
 module.exports = { identity, identityF, add, subtract, multiply, 
                    increment, addF, curry, liftF, once, twice,
                    composeU, composeB, limit, from, to, fromTo,
                    element, collect, filter, concat, fibonacciF,
-                   genSymF, genSymFF };
+                   genSymF, genSymFF, counter };
