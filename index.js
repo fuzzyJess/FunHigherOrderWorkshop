@@ -178,12 +178,15 @@ function genSymFF(func, inputNum) {
 }
 
 function counter(num) {
+    let counter = num;
     return {up: 
         () => {
-            return num + 1;
+            counter++;
+            return counter;
         }, down: 
         () => {
-            return num - 1;
+            counter--;
+            return counter;
         }};
 }
 
