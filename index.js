@@ -181,6 +181,9 @@ function counter(num) {
     return {up: 
         () => {
             return num + 1;
+        }, down: 
+        () => {
+            
         }};
 }
 
