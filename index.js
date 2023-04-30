@@ -194,6 +194,7 @@ function counter(num) {
 
 function revokable() {
     return {invoke: 
+        () => {}, revoke:
         () => {}};
 }
 
