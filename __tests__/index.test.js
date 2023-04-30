@@ -487,7 +487,7 @@ describe('Higher Order Functions', () => {
         expect(Object.keys(counter(20))).toEqual(['up', 'down']);
       });
     });
-    describe.only('revoke', () => {
+    describe.only('revokable', () => {
       it('returns an object', () => {
         const obj = revokable(add);
         expect(typeof obj).toBe('object');
