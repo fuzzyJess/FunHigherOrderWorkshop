@@ -197,7 +197,9 @@ function revokable(func) {
         (num1, num2) => {
             return func(num1, num2)
         }, revoke:
-        () => {}};
+        () => {
+            func = () => {};
+        }};
 }
 
 module.exports = { identity, identityF, add, subtract, multiply, 
