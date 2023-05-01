@@ -192,9 +192,11 @@ function counter(num) {
         }};
 }
 
-function revokable() {
+function revokable(func) {
     return {invoke: 
-        () => {}, revoke:
+        (num1, num2) => {
+            return func(num1, num2)
+        }, revoke:
         () => {}};
 }
 
